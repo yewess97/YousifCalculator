@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Lato';
+    src: url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPGQ.woff2);
+}
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzjsGyN.woff2);
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("images/background.jpg"), fixed center no-repeat;
+    background-size: cover;
+}
+
+.calc {
+    display: block;
+    width: 35%;
+    margin: 5em 0 0 41em;
+}
+
+.frame {
+    position: relative;
+    display: block;
+    width: 417px;
+    height: 341px;
+    padding: 16px;
+    background: gray;
+    border-radius: 8px;
+    background: linear-gradient(#555, #000);
+}
+
+.title-calc {
+    width: 60%;
+    font-size: 22px;
+    color: gray;
+    font-style: italic;
+}
+
+.calculator {
+    position: relative;
+    display: block;
+    width: 490px;
+    height: 305px;
+    margin-top: 15px;
+}
+
+#history {
+    width: 85%;
+    height: 33px;
+    background: #333;
+    color: #999;
+    text-align: right;
+}
+
+#view {
+    width: 85%;
+    height: 34px;
+    background: #333;
+    color: #CCC;
+    text-align: right;
+    font-size: 20px;
+}
+
+#buttons {
+    display: grid;
+    grid-template-areas:
+    "a a a b r"
+    "d e f c r"
+    "h i j g r"
+    "l m n k r"
+    "p p q o r";
+}
+.a {grid-area: a;}
+.b {grid-area: b;}
+.c {grid-area: c;}
+.d {grid-area: d;}
+.e {grid-area: e;}
+.f {grid-area: f;}
+.g {grid-area: g;}
+.h {grid-area: h;}
+.i {grid-area: i;}
+.j {grid-area: j;}
+.k {grid-area: k;}
+.l {grid-area: l;}
+.m {grid-area: m;}
+.n {grid-area: n;}
+.o {grid-area: o;}
+.p {grid-area: p;}
+.q {grid-area: q;}
+.r {grid-area: r;}
+
+#buttons * {
+    cursor: pointer;
+    text-align: center;
+    height: 45px;
+    font-size: 17px;
+    line-height: 47px;
+    border: 1px solid #aaa;
+    border-right: unset;
+    border-bottom: unset;
+    user-select: none;
+    background: linear-gradient(#fff, #bbb);
+}
+
+#buttons *:hover {
+    background: #fcc609;
+    color: #333;
+    font-weight: bold;
+}
+
+#buttons *:active {
+    background: #fce809;
+}
+
+#reset {
+    background: yellow;
+}
+
+#equals {
+    background: blue;
+    color: white;
+    height: 229px;
+    width: 65px;
+    line-height: 10em;
+    font-size: 25px;
+}
+
+.on {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(lime, green);
+    border-radius: 16px;
+    border: 1px solid #000;
+}
+
+#message, #message2 {
+    display: none;
+}
+
+.copy {
+    width: 100%;
+    float: left;
+    height: 62.5px;
+    background-color: #0a0a0a;
+    position: absolute;
+    bottom: 0;
+    left: -0.5px;
+    text-align: center;
+}
+.copy p, span, a {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+#copyright {
+    font-size: 20px;
+}
